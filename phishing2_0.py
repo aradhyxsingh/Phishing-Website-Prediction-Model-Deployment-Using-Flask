@@ -20,6 +20,8 @@ df['Result']=df1['Result']
 
 df['Result'] = df['Result'].map({-1:0, 1:1})
 df['Result'].unique()
+#to check null values in the dataframe
+df.isnull()
 
 from sklearn.model_selection import train_test_split
 X=df.drop("Result",axis=1).values
